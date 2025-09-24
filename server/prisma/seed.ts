@@ -1,6 +1,13 @@
+import { fileURLToPath } from "url";
+import path from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// adding the above resolves the __dirname and __filename not defined error because they exits by default in commonjs and not in esmodule issue
+
 import { PrismaClient, Prisma } from "@prisma/client";
 import fs from "fs";
-import path from "path";
+// import path from "path";
 
 const prisma = new PrismaClient();
 

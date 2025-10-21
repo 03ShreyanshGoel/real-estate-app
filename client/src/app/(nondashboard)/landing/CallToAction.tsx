@@ -9,7 +9,7 @@ const CallToAction = () => {
         <div className='relative py-24'>
             <Image
                 src="/landing-call-to-action.jpg"
-                alt="Domoro Search Section Background"
+                alt=" Search Section Rentiful Background"
                 fill
                 className='object-cover object-center' />
             <div className='absolute inset-0 bg-black opacity-60'></div>

@@ -12,7 +12,7 @@ const FooterSection = () => {
         <div className='flex flex-col md:flex-row justify-between items-center'>
           <div>
             <Link href='/' className="text-xl font-bold" scroll={false}>
-            Domoro
+            Rentiful
             </Link>
           </div>
           <nav className='mb-4'>

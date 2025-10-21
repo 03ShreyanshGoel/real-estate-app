@@ -20,9 +20,9 @@ const Navbar = () => {
                                 className='w-6 h-6'
                             />
                             <div className='text-xl font-bold'>
-                                DOM
+                                RENTI
                                 <span className='text-secondary-500 font-light hover:!text-primary-300'>
-                                    ORA
+                                    FUL
                                 </span>
                             </div>
                         </div>

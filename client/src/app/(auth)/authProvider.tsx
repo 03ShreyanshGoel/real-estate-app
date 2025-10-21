@@ -1,10 +1,10 @@
 import React from 'react';
 import { Amplify } from 'aws-amplify';
-
-import { Authenticator, Heading, Placeholder, Radio, RadioGroupField, useAuthenticator, View } from '@aws-amplify/ui-react';
+import {
+  Authenticator, Heading,
+  Radio, RadioGroupField, useAuthenticator, View
+} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { signIn } from 'aws-amplify/auth';
-import { FormField } from '@/components/ui/form';
 
 Amplify.configure({
   Auth: {
@@ -43,7 +43,8 @@ const components = {
   SignUp: {
     FormFields() {
       const { validationErrors } = useAuthenticator();
-      return (<><Authenticator.SignUp.FormFields />
+      return (<>
+      <Authenticator.SignUp.FormFields />
         <RadioGroupField legend="Role" name="custom:role" errorMessage={validationErrors?.["custom:role"]}
           hasError={!!validationErrors?.["custom:role"]}
           isRequired>
@@ -58,8 +59,8 @@ const components = {
       return (
         <View className="text-center mt-4 mb-7">
           <p className='text-muted-foreground'>
-            Already have an account{" "}
-            <button onClick={toSignIn} className='text-primary hover:underline bg-transparent boporder-none p-0'>Sign In</button>
+            Already have an account?{" "}
+            <button onClick={toSignIn} className='text-primary hover:underline bg-transparent boporder-none p-0'>Sign in</button>
           </p>
         </View>
       )
@@ -69,13 +70,13 @@ const components = {
 
 const formFields = {
   signIn: {
-    email: {
-      placeholder: "Enter your email",
+    username: {
+      placeholder: "Enter your Email",
       label: "Email",
       isRequired: true,
     },
     password: {
-      placeholder: "Enter your password",
+      placeholder: "Enter your Password",
       label: "Password",
       isRequired: true,
     }
@@ -112,10 +113,12 @@ const Auth = ({ children }: { children: React.ReactNode }) => {
   const { user } = useAuthenticator((context) => [context.user]);
   return (
     <div className='h-full'>
-      <Authenticator components={components}
-      formFields={formFields}>
-      {() => <>{children}</>}
-    </Authenticator>
+      <Authenticator
+        components={components}
+        formFields={formFields}
+      >
+        {() => <>{children}</>}
+      </Authenticator>
     </div>
   );
 }

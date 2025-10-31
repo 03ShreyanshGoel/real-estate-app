@@ -64,7 +64,7 @@
 }
 
 /* Dark mode theme */
-.dark {
+/* .dark {
   --color-background: 222.2 84% 3.9%;
   --color-foreground: 210 40% 98%;
   --color-card: 222.2 84% 4.9%;
@@ -92,7 +92,7 @@
   --color-sidebar-accent-foreground: 240 4.8% 95.9%;
   --color-sidebar-border: 240 3.7% 15.9%;
   --color-sidebar-ring: 217.2 91.2% 59.8%;
-}
+} */
 
 *,
 *::before,
@@ -108,7 +108,7 @@ body,
   width: 100%;
   @apply text-sm;
   @apply bg-white;
-  @apply dark:bg-black;
+  /* @apply dark:bg-black; */
 }
 
 .dashboard-container {
